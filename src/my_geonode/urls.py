@@ -17,14 +17,20 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 #########################################################################
-
+from django.conf.urls import include, url
 from geonode.urls import urlpatterns
+from geonode.api.urls import api
+from geonode.api.urls import router
 
-'''
+from geocollections.api import GeocollectionResource
+from geocollections.views import GeocollectionViewSet
+
+api.register(GeocollectionResource())
+router.register(r'geocollections', GeocollectionViewSet, 'geocollections')
+
 # You can register your own urlpatterns here
-urlpatterns = [
-    url(r'^/?$',
-        homepage,
-        name='home'),
- ] + urlpatterns
-'''
+urlpatterns += [
+    url(r'', include(api.urls)),
+    url(r'^api/v2/', include(router.urls)),
+    url(r'^geocollections/', include('geocollections.urls')),
+]
