@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-29 19:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "My Geonode"
+msgstr "我的GeoNode"
+
+msgid "sharing my geospatial data, my maps and my apps"
+msgstr "共享我的空间数据、地图、App"
+
+msgid "Done!"
+msgstr "完成！"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Advanced Metadata"
+msgstr ""
+
+msgid "Mandatory"
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Basic Metadata"
+msgstr ""
+
+msgid "Location and Licenses"
+msgstr ""
+
+msgid "Required Metadata"
+msgstr ""
+
+msgid "Optional Metadata"
+msgstr ""
+
+msgid "Dataset Attributes"
+msgstr ""
+
+msgid "Thumbnail"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Choose one of the following..."
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "Other, Optional, Metadata"
+msgstr ""
+
+msgid "Responsible Parties"
+msgstr ""
+
+msgid "Responsible and Permissions"
+msgstr ""
+
+msgid "Use a custom template?"
+msgstr ""
+
+msgid "Attribute"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Display Order"
+msgstr ""
+
+msgid "Display Type"
+msgstr ""
+
+msgid "Visible"
+msgstr ""
+
+msgid "Publishing"
+msgstr ""
+
+msgid "Other Settings"
+msgstr ""
+
+msgid "Time series settings"
+msgstr ""
+
+msgid "Additional Help"
+msgstr ""
+
+msgid "Enabling Time"
+msgstr ""
+
+msgid ""
+"A dataset can support one or two time attributes. If a single\n"
+"                        attribute is used, the dataset is considered to "
+"contain data that is valid at single points in time. If two\n"
+"                        attributes are used, the second attribute represents "
+"the end of a valid period  hence the dataset is considered\n"
+"                        to contain data that is valid at certain periods in "
+"time."
+msgstr ""
+
+msgid "Selecting an Attribute"
+msgstr ""
+
+msgid "A time attribute can be"
+msgstr ""
+
+msgid "An existing date"
+msgstr ""
+
+msgid "Text that can be converted to a timestamp"
+msgstr ""
+
+msgid "A number representing a year"
+msgstr ""

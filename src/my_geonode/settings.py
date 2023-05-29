@@ -56,6 +56,11 @@ WSGI_APPLICATION = "{}.wsgi.application".format(PROJECT_NAME)
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', "en")
 
+LANGUAGES = (
+    ('en-us', 'English'),
+    ('zh-cn', '中文'),
+)
+
 if PROJECT_NAME not in INSTALLED_APPS:
     INSTALLED_APPS += (PROJECT_NAME,'geocollections')
 
@@ -141,3 +146,9 @@ if LDAP_ENABLED and 'geonode_ldap' not in INSTALLED_APPS:
 
 # Add your specific LDAP configuration after this comment:
 # https://docs.geonode.org/en/master/advanced/contrib/#configuration
+
+MAPSTORE_TRANSLATIONS_PATH = [
+    '/static/mapstore/ms-translations',
+    '/static/mapstore/gn-translations',
+    '/static/mapstore/project-translations'
+]
