@@ -1,8 +1,30 @@
+<!-- _geonode_config.html file in the my_geonode project -->
 {% extends 'geonode-mapstore-client/_geonode_config.html' %}
 {% block override_local_config %}
 <script>
-    window.__GEONODE_CONFIG__.overrideLocalConfig = function(localConfig, _) {
-        // Here the localConfig can be overridden and/or extended
+    window.__GEONODE_CONFIG__.overrideLocalConfig = function(localConfig) {
+        /*
+        "SearchServicesConfig" has been disabled by default but is still available
+        inside the list of imported plugins.
+        It should be enabled only on the pages that contain the "Search" plugin.
+        */
+
+        localConfig.plugins.map_viewer.push({ "name": "SearchServicesConfig" });
+
+        // an example on how you can remove a plugin from configuration
+        // example: Measure
+        var removePluginName = "Measure";
+        var pluginPageName = "map_viewer";
+        var newMapPlugins = [];
+        for (var i = 0; i < localConfig.plugins[pluginPageName].length; i++) {
+            var currentPlugin = localConfig.plugins[pluginPageName][i];
+            var isRemovePlugin = currentPlugin.name === removePluginName;
+            if (!isRemovePlugin) {
+                newMapPlugins.push(currentPlugin);
+            }
+        }
+        localConfig.plugins[pluginPageName] = newMapPlugins;
+
         return localConfig;
     };
 </script>

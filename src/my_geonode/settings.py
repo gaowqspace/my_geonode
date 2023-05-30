@@ -152,3 +152,70 @@ MAPSTORE_TRANSLATIONS_PATH = [
     '/static/mapstore/gn-translations',
     '/static/mapstore/project-translations'
 ]
+
+DEFAULT_MAP_CENTER_X = 11972506 # initial x center position of the map (EPSG:3857 default crs)
+DEFAULT_MAP_CENTER_Y = 4061013 # initial y center position of the map (EPSG:3857 default crs)
+DEFAULT_MAP_ZOOM = 4 # initial zoom level of the map
+
+# Change GeoNode BaseLayers
+MAPSTORE_BASELAYERS = [
+    {
+        # First Layer
+        "type": "osm",
+        "title": "Open Street Map",
+        "name": "mapnik",
+        "source": "osm",
+        "group": "background",
+        "visibility": True
+    },
+    {
+        # Second Layer
+        "source": "ol",
+        "group": "background",
+        "id": "none",
+        "name": "empty",
+        "title": "Empty Background",
+        "type": "empty",
+        "visibility": False,
+        "args": ["Empty Background", {"visibility": False}]
+    },
+    {
+        # Third Layer
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm_simple_dark",
+        "opacity": 1,
+        "title": "OSM Simple Dark",
+        # "thumbURL": "path/to/thumb/image",
+        "type": "wms",
+        "url": [
+            "https://maps6.geosolutionsgroup.com/geoserver/wms",
+            "https://maps3.geosolutionsgroup.com/geoserver/wms",
+            "https://maps1.geosolutionsgroup.com/geoserver/wms",
+            "https://maps4.geosolutionsgroup.com/geoserver/wms",
+            "https://maps2.geosolutionsgroup.com/geoserver/wms",
+            "https://maps5.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm_simple_dark",
+        "visibility": False,
+        "singleTile": False,
+        "credits": {
+            "title": "OSM Simple Dark | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+    }
+]
+
+# Update the plugin configuration
+#MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
+#    {
+#        "op": "remove",
+#        "jsonpath": "$.map_viewer..[?(@.name == 'Measure')]"
+#    },
+#    {
+#        "op": "add",
+#        "jsonpath": "/map_viewer/-",
+#        "value": {
+#            "name": "SearchServicesConfig"
+#        }
+#    }
+#]
